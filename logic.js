@@ -112,22 +112,23 @@ function createMap(earthquakes) {
     collapsed: false
   }).addTo(myMap);
 
-var legend = L.control({position: 'bottomright'});
-legend.onAdd = function (map) {
-  for (i = 0; i < maglevels.length; i++) {
-    var magLevel = maglevels[i];
-    var color = Lcolors[i];
-    var item = document.createElement('div');
-    var key = document.createElement('span');
-    key.className = 'legend-key';
-    key.style.backgroundColor = color;
+// var legend = L.control({position: 'bottomright'});
+
+// legend.onAdd = function () {
+//   for (i = 0; i < maglevels.length; i++) {
+//     var magLevel = maglevels[i];
+//     var color = Lcolors[i];
+//     var item = document.createElement('div');
+//     var key = document.createElement('span');
+//     key.className = 'legend-key';
+//     key.style.backgroundColor = color;
   
-    var value = document.createElement('span');
-    value.innerHTML = magLevel;
-    item.appendChild(key);
-    item.appendChild(value);
-    legend.appendChild(item);
-  };
-  legend.addTo(myMap);
+//     var value = document.createElement('span');
+//     value.innerHTML = magLevel;
+//     item.appendChild(key);
+//     item.appendChild(value);
+//     legend.appendChild(item);
+//   };
+//   legend.addTo(myMap);
 }
-}
+
